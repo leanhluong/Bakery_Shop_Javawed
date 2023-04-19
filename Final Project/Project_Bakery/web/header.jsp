@@ -14,8 +14,9 @@
             </div> 
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav " >
-                    <li><a class="bi bi-house-fill" href="home">Home</a></li>
-                    <li><a href="productlist">Product List</a> </li>
+                    <li><img style="width: 100px" src="img/logo.png" alt="alt"/></li>
+                    <li> <a class="bi bi-house-fill" href="home">Home</a></li>
+                    <li><a href="productlist">Cakes</a> </li>
                         <c:if  test="${sessionScope.account.role == 1}">
                         <li><a  href="manage">Manage product</a>
 
@@ -39,13 +40,14 @@
                         </li>
                     </c:if>  
                     <c:if  test="${sessionScope.carts.size()!=0}">
-                        <li><a class="bi bi-cart-plus-fill" " href="carts">Cart <span style="  background-color: #000;
+                        <li><a class="bi bi-cart-plus-fill" " href="carts">Cart </a> 
+<!--                            <span style="  background-color: #000;
                                                                                       color: #fff;
                                                                                       font-weight: bold;
                                                                                       border-radius: 50%;
                                                                                       padding: 5px 10px;
                                                                                       text-align: center;
-                                                                                      margin-left: 5px;">${sessionScope.carts.size()}</span></a> 
+                                                                                      margin-left: 5px;">${sessionScope.carts.size()}</span>-->
                             </c:if>  
                     </li>
                     <li><a class="bi bi-cart-check-fill" href="order">My Order</a></li>
@@ -57,8 +59,8 @@
                         <li><a href="logout">Logout</a></li>
                         </c:if>
                         <c:if test="${sessionScope.account == null}">
-                        <li><a href="login">Login</a></li>
-                        <li><a href="signup">Sign Up</a></li>
+                        <li><a href="login.jsp">Login</a></li>
+                        <li><a href="register.jsp">Sign Up</a></li>
                         </c:if>
                 </ul>
             </div>  

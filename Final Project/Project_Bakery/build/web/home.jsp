@@ -1,17 +1,13 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
-<!--
-        ustora by freshdesignweb.com
-        Twitter: https://twitter.com/freshdesignweb
-        URL: https://www.freshdesignweb.com/ustora/
--->
+
 <html lang="en">
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>Clothes Shop</title>
+        <title>Luong Anh Bakery</title>
 
         <!-- Google Fonts -->
         <link href='http://fonts.googleapis.com/css?family=Titillium+Web:400,200,300,700,600' rel='stylesheet' type='text/css'>
@@ -32,12 +28,6 @@
         <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css"
             rel="stylesheet"/>
 
-        <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-        <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-        <!--[if lt IE 9]>
-          <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
-          <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-        <![endif]-->
     </head>
     <body>
 
@@ -50,29 +40,15 @@
             <div class="block-slider block-slider4">
                 <ul class="" id="bxslider-home4">
                     <li>
-                        <img src="https://img1.junaroad.com//assets/images/mobileNotif/img-1646740764121.jpg?page_id=2390025&crsl_pos=1" alt="Slide">
+                        <img src="img/1.png" alt="Slide">
 
                     </li>
-                    <li><img src="https://ae01.alicdn.com/kf/HTB1Sdk2QFXXXXa1XpXXq6xXFXXXV/223140999/HTB1Sdk2QFXXXXa1XpXXq6xXFXXXV.jpg" alt="Slide">
+                    <li><img src="img/cake4.jpg" alt="Slide">
 
                     </li>
-                    <li><img src="https://fastsole.co.uk/wp-content/uploads/2017/12/Nike-Air-Max-1-Obsidian-30th-Anniversary-908375-104-Release-Date-Sneakers-Trainers-FOR-Man-Women-in-United-Kingdom-UK-Europe-EU-Germany-DE-07.jpg" alt="Slide">
-                        <div class="caption-group">
-                            <h2 class="caption title">
-                                Nike <span class="primary">Store <strong>Ipod</strong></span>
-                            </h2>
-                            <h4 class="caption subtitle">Select Item</h4>
-
-                        </div>
+                    <li><img src="img/cake5.jpg" alt="Slide">
                     </li>
-                    <li><img src="https://fastsole.co.uk/wp-content/uploads/2018/02/Nike-Air-Max-98-Gym-Red-Release-Date-AH6799-101-02.jpg" alt="Slide">
-                        <div class="caption-group">
-                            <h2 class="caption title">
-                                Strong <span class="primary">Style <strong>Hiphop</strong></span>
-                            </h2>
-                            <h4 class="caption subtitle">& Jordan</h4>
-
-                        </div>
+                    <li><img src="img/7.jpeg" alt="Slide">
                     </li>
                 </ul>
             </div>

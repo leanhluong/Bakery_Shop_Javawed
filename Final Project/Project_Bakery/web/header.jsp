@@ -4,17 +4,17 @@
 <div class="mainmenu-area">
     <div class="container">
         <div class="row">
-            <div class="navbar-header">
+<!--            <div class="navbar-header">
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
                     <span class="sr-only">Toggle navigation</span>
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-            </div> 
+            </div> -->
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav " >
-                    <li><img style="width: 100px" src="img/logo.png" alt="alt"/></li>
+                    <li> <a style="padding:  0px;" href="home.jsp"><img  style="width: 80px" src="img/logo.png" alt="alt"/></a></li>
                     <li> <a class="bi bi-house-fill" href="home">Home</a></li>
                     <li><a href="productlist">Cakes</a> </li>
                         <c:if  test="${sessionScope.account.role == 1}">

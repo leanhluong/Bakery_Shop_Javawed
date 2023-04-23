@@ -4,7 +4,6 @@
  */
 package Controller;
 
-import dao.CategoryDAO;
 import dao.ProductDAO;
 import java.io.IOException;
 import java.io.PrintWriter;
@@ -14,15 +13,16 @@ import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import jakarta.servlet.http.HttpSession;
-import java.util.ArrayList;
-import model.Product;
+import java.util.LinkedHashMap;
+import java.util.Map;
+import model.Cart;
 
 /**
  *
  * @author ADMIN
  */
-@WebServlet(name = "ProductListController", urlPatterns = {"/productlist"})
-public class ProductListController extends HttpServlet {
+@WebServlet(name = "CartController", urlPatterns = {"/carts"})
+public class CartController extends HttpServlet {
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
@@ -41,10 +41,10 @@ public class ProductListController extends HttpServlet {
             out.println("<!DOCTYPE html>");
             out.println("<html>");
             out.println("<head>");
-            out.println("<title>Servlet ProductListController</title>");
+            out.println("<title>Servlet CartController</title>");
             out.println("</head>");
             out.println("<body>");
-            out.println("<h1>Servlet ProductListController at " + request.getContextPath() + "</h1>");
+            out.println("<h1>Servlet CartController at " + request.getContextPath() + "</h1>");
             out.println("</body>");
             out.println("</html>");
         }
@@ -63,35 +63,32 @@ public class ProductListController extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
-        String search = request.getParameter("search");
-        String category = request.getParameter("category");
-        int page = 1;
-        if (request.getParameter("page") != null) {
-            page = Integer.parseInt(request.getParameter("page"));
-        }
         ProductDAO pdao = new ProductDAO();
+        request.setAttribute("proList", pdao.getNewProduct());
+        try (PrintWriter out = response.getWriter()) {
+            HttpSession session = request.getSession();
+            Map<Integer, Cart> carts = (Map<Integer, Cart>) session.getAttribute("carts");
+            if (carts == null) {
+                carts = new LinkedHashMap<>();
+            }
+            //tinh tong tien
+            double totalMoney = 0;
+            for (Map.Entry<Integer, Cart> entry : carts.entrySet()) {
+                Integer productId = entry.getKey();
+                Cart cart = entry.getValue();
+                
+                if(cart.getQuantity()<1){
+                    cart.setQuantity(1);
+                }
 
-        ArrayList<Product> proList = pdao.getAllProduct(search, category);
-        int total = proList.size() % 12 == 0 ? proList.size() / 12 : (proList.size() / 12) + 1;
+                totalMoney += cart.getQuantity() * cart.getProduct().getPrice();
 
-        request.setAttribute("category", category);
-        request.setAttribute("search", search);
-
-        CategoryDAO cdao = new CategoryDAO();
-        request.setAttribute("catList", cdao.getCategory());
-
-        if (page == total) {
-            request.setAttribute("proList", proList.subList((page - 1) * 12, proList.size()));
-        } else {
-            request.setAttribute("proList", proList.subList((page - 1) * 12, page * 12));
+            }
+            request.setAttribute("totalMoney", totalMoney);
+            request.setAttribute("carts", carts);
+            request.getRequestDispatcher("carts.jsp").forward(request, response);
         }
-        request.setAttribute("total", total);
-        request.setAttribute("page", page);
 
-        HttpSession session = request.getSession();
-        session.setAttribute("urlHistory", "productlist");
-
-        request.getRequestDispatcher("productlist.jsp").forward(request, response);
     }
 
     /**
@@ -105,7 +102,7 @@ public class ProductListController extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        processRequest(request, response);
+        
     }
 
     /**

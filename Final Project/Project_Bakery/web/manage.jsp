@@ -275,41 +275,7 @@
         <div class="text-center">
             <a style="margin-left: 10px;margin-top: 20px;" href="home" class="btn btn-info"><span>Back To Home</span></a>
         </div>
-        <div class="row" ">
-
-        </div>
-        <div class="row" style="margin-top:50px;float: right;">
-        </form>
-
-        <form action="productlist" class="row col-md-7">
-            <div class="col-md-8">
-                <input  type="text" name="search" class="form-control" value="${search}"
-                        style="width: 170px;" placeholder="Search By Name" />
-            </div>
-
-            <div class="col-md-1">
-                <button class="btn btn-danger">Search</button>
-            </div>
-        </form>
-        <form action="productlist"  class="row col-md-7">
-            <div class="col-md-7">
-                <select class="form-control" name="category" style=" width: 170px;">
-                    <option value="-1">All</option>
-                    <c:forEach items="${catList}" var="u">
-                        <option value="${u.id}" ${category == u.id?'selected':''}>${u.name}</option>
-                    </c:forEach>
-
-                </select>
-            </div>
-            <div class="col-md-1">
-                <button class="btn btn-danger">Filter</button>
-            </div>
-
-    </div>
     <div>
-
-
-
         <div class="container-xl">
             <div class="table-responsive">
                 <div class="table-wrapper">
@@ -329,9 +295,10 @@
                             <tr>
                                 <th>ID</th>
                                 <th>Name</th>
+                                <th>Code</th>
                                 <th>Image</th>
                                 <th>Price</th>
-                                <th>Quantity</th>
+                                <th>Description</th>
                                 <th>Actions</th>
                             </tr>
                         </thead>
@@ -341,9 +308,10 @@
                                 <tr>
                                     <td>${c.id}</td>
                                     <td>${c.name}</td>
-                                    <td><img style="height: 100px;width: 100px;" src="${c.image}"></img></td>
-                                    <td>${c.sale_price}$</td>
-                                    <td>${c.quantity}</td>
+                                    <td>${c.code}</td>
+                                    <td><img style="height: 100px;width: 100px;" src="${c.imageUrl}"></img></td>
+                                    <td>${c.price}$</td>
+                                    <td>${c.description}</td>
                                     <td>
                                         <a href="#editEmployeeModal${c.id}" class="edit" data-toggle="modal">
                                             <i class="material-icons" data-toggle="tooltip" title="Edit">&#xE254;</i>
@@ -369,20 +337,24 @@
                                                     <input type="text" class="form-control" name="name" required value="${c.name}">
                                                 </div>
                                                 <div class="form-group">
-                                                    <label>Image</label>
-                                                    <input type="text" class="form-control" name="image" required>
+                                                    <label>Code</label>
+                                                    <input type="text" class="form-control" name="code" value="${c.code}">
                                                 </div>
                                                 <div class="form-group">
-                                                    <label>Quantity</label>
-                                                    <input type="text" class="form-control" name="quantity" value="${c.quantity}">
+                                                    <label>image</label>
+                                                    <input type="text" class="form-control" name="image" value="${c.imageUrl} >
                                                 </div>
                                                 <div class="form-group">
                                                     <label>Price</label>
                                                     <input type="text" class="form-control" name="price"  value="${c.price}">
                                                 </div>	
                                                 <div class="form-group">
+                                                    <label>Category_Id</label>
+                                                    <input type="text" class="form-control" name="category"  value="${c.categoryId}">
+                                                </div>	
+                                                <div class="form-group">
                                                     <label>Description</label>
-                                                    <textarea type="text" class="form-control" name="description"></textarea>
+                                                    <textarea type="text" class="form-control" name="description" valu ></textarea>
                                                 </div>
                                             </div>
                                             <div class="modal-footer">
@@ -456,11 +428,11 @@
                             </div>
                             <div class="form-group">
                                 <label>Image</label>
-                                <input type="text" class="form-control" name="image" required>
+                                <input type="text" class="form-control" name="image" >
                             </div>
                             <div class="form-group">
-                                <label>Quantity</label>
-                                <input type="text" class="form-control" name="quantity">
+                                <label>code</label>
+                                <input type="text" class="form-control" name="code">
                             </div>
                             <div class="form-group">
                                 <label>Price</label>
@@ -478,6 +450,10 @@
                                 </select>
                             </div>
 
+                            <div class="form-group">
+                                <label>Created Date</label>
+                                <textarea type="date" class="form-control" name="date"></textarea>
+                            </div>			
                             <div class="form-group">
                                 <label>Description</label>
                                 <textarea type="text" class="form-control" name="description"></textarea>

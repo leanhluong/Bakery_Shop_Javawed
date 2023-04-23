@@ -21,7 +21,7 @@ import model.Category;
  */
 public class CategoryDAO extends DBContext{ //thao tác với bảng category
 
-    public List<Category> getCategories() {
+    public List<Category> getCategory() {
         List<Category> list = new ArrayList<>();
         try {
             String sql = "select * from Category";

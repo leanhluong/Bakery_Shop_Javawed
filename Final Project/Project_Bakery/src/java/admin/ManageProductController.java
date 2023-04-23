@@ -102,19 +102,21 @@ public class ManageProductController extends HttpServlet {
             int id = Integer.parseInt(request.getParameter("id"));
             String name = request.getParameter("name");
             String image = request.getParameter("image");
-            int quantity = Integer.parseInt(request.getParameter("quantity"));
+            String code = request.getParameter("code");
             double price = Double.parseDouble(request.getParameter("price"));
             String description = request.getParameter("description");
-            pdao.changeProduct(name, image, quantity, price, description, id);
+            int category_Id = Integer.parseInt(request.getParameter("category"));
+            pdao.changeProduct(name, code, price, description, image, category_Id, id);
 
         } else if ("add".equals(action)) {
-            String name = request.getParameter("name");
-            String image = request.getParameter("image");
-            int quantity = Integer.parseInt(request.getParameter("quantity"));
-            double price = Double.parseDouble(request.getParameter("price"));
-            String description = request.getParameter("description");
-            int cate_id = Integer.parseInt(request.getParameter("category"));
-            pdao.addProduct(name, image, quantity, price, cate_id, description);
+        String name = request.getParameter("name");
+        String code = request.getParameter("code");
+        double price = Double.parseDouble(request.getParameter("price"));
+        String describe = request.getParameter("describe");
+        String image = request.getParameter("image");
+        String create_date = request.getParameter("date");
+        int category_Id = Integer.parseInt(request.getParameter("category"));
+            pdao.addProduct(name, code, price, describe, image, create_date, category_Id);
         } else {// delete
             int id = Integer.parseInt(request.getParameter("id"));
             pdao.deleteProduct(id);

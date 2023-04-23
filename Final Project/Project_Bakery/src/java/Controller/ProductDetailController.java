@@ -1,10 +1,9 @@
-/*
+    /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Servlet.java to edit this template
  */
 package Controller;
 
-import dao.CategoryDAO;
 import dao.ProductDAO;
 import java.io.IOException;
 import java.io.PrintWriter;
@@ -13,16 +12,13 @@ import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
-import jakarta.servlet.http.HttpSession;
-import java.util.ArrayList;
-import model.Product;
 
 /**
  *
  * @author ADMIN
  */
-@WebServlet(name = "ProductListController", urlPatterns = {"/productlist"})
-public class ProductListController extends HttpServlet {
+@WebServlet(name = "ProductDetailController", urlPatterns = {"/productdetail"})
+public class ProductDetailController extends HttpServlet {
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
@@ -41,10 +37,10 @@ public class ProductListController extends HttpServlet {
             out.println("<!DOCTYPE html>");
             out.println("<html>");
             out.println("<head>");
-            out.println("<title>Servlet ProductListController</title>");
+            out.println("<title>Servlet ProductDetailController</title>");
             out.println("</head>");
             out.println("<body>");
-            out.println("<h1>Servlet ProductListController at " + request.getContextPath() + "</h1>");
+            out.println("<h1>Servlet ProductDetailController at " + request.getContextPath() + "</h1>");
             out.println("</body>");
             out.println("</html>");
         }
@@ -63,35 +59,13 @@ public class ProductListController extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
-        String search = request.getParameter("search");
-        String category = request.getParameter("category");
-        int page = 1;
-        if (request.getParameter("page") != null) {
-            page = Integer.parseInt(request.getParameter("page"));
-        }
+        int id = Integer.parseInt(request.getParameter("id"));
         ProductDAO pdao = new ProductDAO();
+        request.setAttribute("proList", pdao.getNewProduct());
+        request.setAttribute("product", pdao.getProduct(id));
+        request.getSession().setAttribute("urlHistory", "productdetail?id=" + id);
 
-        ArrayList<Product> proList = pdao.getAllProduct(search, category);
-        int total = proList.size() % 12 == 0 ? proList.size() / 12 : (proList.size() / 12) + 1;
-
-        request.setAttribute("category", category);
-        request.setAttribute("search", search);
-
-        CategoryDAO cdao = new CategoryDAO();
-        request.setAttribute("catList", cdao.getCategory());
-
-        if (page == total) {
-            request.setAttribute("proList", proList.subList((page - 1) * 12, proList.size()));
-        } else {
-            request.setAttribute("proList", proList.subList((page - 1) * 12, page * 12));
-        }
-        request.setAttribute("total", total);
-        request.setAttribute("page", page);
-
-        HttpSession session = request.getSession();
-        session.setAttribute("urlHistory", "productlist");
-
-        request.getRequestDispatcher("productlist.jsp").forward(request, response);
+        request.getRequestDispatcher("productdetail.jsp").forward(request, response);
     }
 
     /**

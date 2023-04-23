@@ -93,13 +93,13 @@
                 <div class="row">
                     <div class="col-md-12">
                         <div class="latest-product">
-                            <h2 class="section-title">New Products</h2>
+                            <h2 class="section-title">Mẫu Bánh Mới</h2>
                             <div class="product-carousel">
 
                                 <c:forEach items="${proList}" var="c">
                                     <div class="single-product">
                                         <div class="product-f-image">
-                                            <img style="height: 250px;widows: 150px;" src="${c.image}" alt="">
+                                            <img style="height: 250px;widows: 150px;" src="${c.imageUrl}" alt="">
                                             <div class="product-hover">
                                                 <a href="add_to_cart?productId=${c.id}" class="add-to-cart-link"><i class="fa fa-shopping-cart"></i> Add to cart</a>
                                                 <a href="productdetail?id=${c.id}" class="view-details-link"><i class="fa fa-link"></i> See details</a>
@@ -109,7 +109,7 @@
                                         <h2><a href="productdetail?id=${c.id}">${c.name}</a></h2>
 
                                         <div class="product-carousel-price">
-                                            <ins>${c.sale_price}$</ins> <del>${c.price}$</del>
+                                            <ins>${c.price}đ</ins> 
                                         </div> 
                                     </div>
                                 </c:forEach>
@@ -132,13 +132,13 @@
                     <div class="row">
                         <div class="col-md-12">
                             <div class="latest-product">
-                                <h2 class="section-title">Sale Products</h2>
+                                <h2 class="section-title">Bánh Kem</h2>
                                 <div class="product-carousel">
 
-                                    <c:forEach items="${proList2}" var="c">
+                                    <c:forEach items="${proList1}" var="c">
                                         <div class="single-product">
                                             <div class="product-f-image">
-                                                <img style="height: 250px;widows: 150px;" src="${c.image}" alt="">
+                                                <img style="height: 250px;widows: 150px;" src="${c.imageUrl}" alt="">
                                                 <div class="product-hover">
                                                     <a href="add_to_cart?productId=${c.id}" class="add-to-cart-link"><i class="fa fa-shopping-cart"></i> Add to cart</a>
                                                     <a href="productdetail?id=${c.id}" class="view-details-link"><i class="fa fa-link"></i> See details</a>
@@ -148,7 +148,7 @@
                                             <h2><a href="productdetail?id=${c.id}">${c.name}</a></h2>
 
                                             <div class="product-carousel-price">
-                                                <ins>${c.sale_price}$</ins> <del>${c.price}$</del>
+                                                <ins>${c.price}đ</ins>
                                             </div> 
                                         </div>
                                     </c:forEach>
@@ -170,13 +170,13 @@
                     <div class="row">
                         <div class="col-md-12">
                             <div class="latest-product">
-                                <h2 class="section-title">Best Saler Products</h2>
+                                <h2 class="section-title">Bánh Ngọt</h2>
                                 <div class="product-carousel">
 
                                     <c:forEach items="${proList2}" var="c">
                                         <div class="single-product">
                                             <div class="product-f-image">
-                                                <img style="height: 250px;widows: 150px;" src="${c.image}" alt="">
+                                                <img style="height: 250px;widows: 150px;" src="${c.imageUrl}" alt="">
                                                 <div class="product-hover">
                                                     <a href="add_to_cart?productId=${c.id}" class="add-to-cart-link"><i class="fa fa-shopping-cart"></i> Add to cart</a>
                                                     <a href="productdetail?id=${c.id}" class="view-details-link"><i class="fa fa-link"></i> See details</a>
@@ -186,7 +186,7 @@
                                             <h2><a href="productdetail?id=${c.id}">${c.name}</a></h2>
 
                                             <div class="product-carousel-price">
-                                                <ins>${c.sale_price}$</ins> <del>${c.price}$</del>
+                                                <ins>${c.price}đ</ins> 
                                             </div> 
                                         </div>
                                     </c:forEach>

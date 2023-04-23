@@ -55,7 +55,7 @@
 
                     <c:if test="${sessionScope.account != null}">
 
-                        <li><a class="bi bi-person-fill" href="profile?username=${sessionScope.account.username}">${sessionScope.account.username}</a></li>
+                        <li><a class="bi bi-person-fill" href="profile?username=${sessionScope.account.username}">${sessionScope.account.displayName}</a></li>
                         <li><a href="logout">Logout</a></li>
                         </c:if>
                         <c:if test="${sessionScope.account == null}">

@@ -1,0 +1,44 @@
+<%-- 
+    Document   : newjsp
+    Created on : Apr 20, 2023, 9:29:32 AM
+    Author     : bachv
+--%>
+
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>JSP Page</title>
+		<style>
+		.container {
+                max-width: 800px;
+                margin: 0 auto;
+                padding: 20px;
+		}
+	</style>
+    </head>
+    <body>
+        <h1>Hello World!</h1>
+        <img src="Image\AOE.jpg" alt="Hình ảnh ví dụ">
+        <br>
+        <input type="text" name="username" placeholder="Nhập tên đăng nhập của bạn">
+        
+        <br> 
+        <a href="https://www.youtube.com" target="_blank">Đây là liên kết ví dụ</a>
+        <div class="container">Đây là phần tử div có thuộc tính class="container"</div>
+        <p style="color: red;">Đây là đoạn văn bản có thuộc tính style="color: red;"</p>
+
+    
+<!--        <h1>Đây là tiêu đề ví dụ</h1>
+        <p>Đây là đoạn văn bản ví dụ</p>
+        <ul>
+            <li>Sản phẩm 1</li>
+            <li>Sản phẩm 2</li>
+            <li>Sản phẩm 3</li>
+        </ul>   -->
+        
+        
+    </body>
+</html>
+

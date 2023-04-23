@@ -24,15 +24,22 @@
                 <div class="offset-md-2 col-lg-5 col-md-7 offset-lg-4 offset-md-3">
                     <div class="panel border bg-white">
                         <div class="panel-heading">
-                            <h3 class="pt-3 font-weight-bold">Sign Up</h3>
+                            <h3 class="pt-3 font-weight-bold">Register</h3>
                         </div>
                         <div class="panel-body p-3">
-                            <form action="signup" method="POST">
+                            <form action="register" method="POST">
                                 <div class="form-group py-2">
                                     UserName
                                     <div class="input-field" style="margin-top: 10px">
                                         <span class="far fa-user p-2"></span>
                                         <input type="text" name="username" id="user-name" placeholder="Username or Email" required>
+                                    </div>
+                                </div>
+                                <div class="form-group py-2">
+                                    Display Name
+                                    <div class="input-field" style="margin-top: 10px">
+                                        <span class="far fa-user p-2"></span>
+                                        <input type="text" name="DisplayName" id="DisplayName" placeholder="Enter your DisplayName" required>
                                     </div>
                                 </div>
                                 <div class="form-group py-1 pb-2">
@@ -59,7 +66,7 @@
                                 <p class="text-center pt-4 " style="color: red; text-decoration: none"> ${SignUpError}<p>
                                 <p class="text-center pt-4 " style="color: red; text-decoration: none"> ${UserNameError}<p>
                                 <div>
-                                    <input type="submit"  class="btn btn-primary btn-block mt-3" value="Sign Up">
+                                    <input type="submit"  class="btn btn-primary btn-block mt-3" value="Register">
                                 </div>
                                 <div class="text-center pt-4 text-muted">You have an account? <a href="login">Log In</a>
                                 </div>

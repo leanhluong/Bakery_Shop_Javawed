@@ -50,7 +50,7 @@
                                 <div>
                                     <input type="submit" class="btn btn-primary btn-block mt-3" value="Log In">
                                 </div>
-                                <div class="text-center pt-4 text-muted">You don't have an account? <a href="signup">Sign up</a>
+                                <div class="text-center pt-4 text-muted">You don't have an account? <a href="register.jsp">Register</a>
                                 </div>
                             </form>
                         </div>

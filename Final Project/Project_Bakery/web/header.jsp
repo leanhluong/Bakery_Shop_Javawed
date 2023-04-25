@@ -26,19 +26,12 @@
                             </div>
                         </form>
                     </li>
-                    <c:if  test="${sessionScope.carts.size()==0}">
+                    <c:if  test="${sessionScope.carts.size()==null}">
                         <li><a class="bi bi-cart-plus-fill" " href="carts">Cart</a> 
-
                         </li>
                     </c:if>  
-                    <c:if  test="${sessionScope.carts.size()!=0}">
-                        <li><a class="bi bi-cart-plus-fill" " href="carts">Cart                             <span style="  background-color: #000;
-                                                                                                                  color: #fff;
-                                                                                                                  font-weight: bold;
-                                                                                                                  border-radius: 50%;
-                                                                                                                  padding: 5px 10px;
-                                                                                                                  text-align: center;
-                                                                                                                  margin-left: 5px;">${sessionScope.carts.size()}</span> </a> 
+                    <c:if  test="${sessionScope.carts.size()!=null}">
+                        <li><a class="bi badgee bi-cart-plus-fill" value =' ${sessionScope.carts.size()}' " href="carts">Cart </a> 
 
                         </c:if>  
                     </li>

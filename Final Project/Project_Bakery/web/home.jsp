@@ -93,7 +93,7 @@
                 <div class="row">
                     <div class="col-md-12">
                         <div class="latest-product">
-                            <h2 class="section-title">Mẫu Bánh Mới</h2>
+                            <h2 class="section-title" style="text-transform:uppercase; font-family: Trocchi">Mẫu Bánh Mới</h2>
                             <div class="product-carousel">
 
                                 <c:forEach items="${proList}" var="c">
@@ -132,7 +132,7 @@
                     <div class="row">
                         <div class="col-md-12">
                             <div class="latest-product">
-                                <h2 class="section-title">Bánh Kem</h2>
+                                <h2 class="section-title" style="text-transform:uppercase; font-family: Trocchi">Bánh Kem</h2>
                                 <div class="product-carousel">
 
                                     <c:forEach items="${proList1}" var="c">
@@ -170,7 +170,7 @@
                     <div class="row">
                         <div class="col-md-12">
                             <div class="latest-product">
-                                <h2 class="section-title">Bánh Ngọt</h2>
+                                <h2 class="section-title" style="text-transform:uppercase; font-family: Trocchi" >Bánh Ngọt</h2>
                                 <div class="product-carousel">
 
                                     <c:forEach items="${proList2}" var="c">

@@ -180,7 +180,7 @@ public class ProductDAO extends DBContext {
     public void changeProduct(String name,String code, double price, String description, String image_url, int category_id, int id) {
 
         try {
-            PreparedStatement ps = connection.prepareStatement("UPDATE [dbo].[product]\n"
+            PreparedStatement ps = connection.prepareStatement("UPDATE [dbo].[Product]\n"
                     + "   SET\n"
                     + "      [product_name] = ?\n"
                     + "      ,[code] = ?\n"

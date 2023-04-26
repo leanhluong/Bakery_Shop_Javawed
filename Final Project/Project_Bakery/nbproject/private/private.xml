@@ -4,23 +4,7 @@
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
             <file>file:/C:/Users/ADMIN/Documents/GitHub/Bakery_Shop/Final%20Project/Project_Bakery/src/java/dao/ProductDAO.java</file>
-            <file>file:/C:/Users/ADMIN/Documents/GitHub/Bakery_Shop/Final%20Project/Project_Bakery/web/home.jsp</file>
-            <file>file:/C:/Users/ADMIN/Documents/GitHub/Bakery_Shop/Final%20Project/Project_Bakery/web/manage.jsp</file>
-            <file>file:/C:/Users/ADMIN/Documents/GitHub/Bakery_Shop/Final%20Project/Project_Bakery/src/java/model/Cart.java</file>
-            <file>file:/C:/Users/ADMIN/Documents/GitHub/Bakery_Shop/Final%20Project/Project_Bakery/web/productlist.jsp</file>
-            <file>file:/C:/Users/ADMIN/Documents/GitHub/Bakery_Shop/Final%20Project/Project_Bakery/src/java/Controller/ProductDetailController.java</file>
-            <file>file:/C:/Users/ADMIN/Documents/GitHub/Bakery_Shop/Final%20Project/Project_Bakery/src/java/Controller/CartController.java</file>
-            <file>file:/C:/Users/ADMIN/Documents/GitHub/Bakery_Shop/Final%20Project/Project_Bakery/src/java/Controller/DeleteCartController.java</file>
-            <file>file:/C:/Users/ADMIN/Documents/GitHub/Bakery_Shop/Final%20Project/Project_Bakery/web/header.jsp</file>
-            <file>file:/C:/Users/ADMIN/Documents/GitHub/Bakery_Shop/Final%20Project/Project_Bakery/src/java/model/Category.java</file>
-            <file>file:/C:/Users/ADMIN/Documents/GitHub/Bakery_Shop/Final%20Project/Project_Bakery/web/css/style.css</file>
-            <file>file:/C:/Users/ADMIN/Documents/GitHub/Bakery_Shop/Final%20Project/Project_Bakery/src/java/Controller/UpdateCartController.java</file>
-            <file>file:/C:/Users/ADMIN/Documents/GitHub/Bakery_Shop/Final%20Project/Project_Bakery/web/productdetail.jsp</file>
-            <file>file:/C:/Users/ADMIN/Documents/GitHub/Bakery_Shop/Final%20Project/Project_Bakery/src/java/Controller/HomeController.java</file>
-            <file>file:/C:/Users/ADMIN/Documents/GitHub/Bakery_Shop/Final%20Project/Project_Bakery/web/carts.jsp</file>
-            <file>file:/C:/Users/ADMIN/Documents/GitHub/Bakery_Shop/Final%20Project/Project_Bakery/src/java/Controller/AddToCartController.java</file>
             <file>file:/C:/Users/ADMIN/Documents/GitHub/Bakery_Shop/Final%20Project/Project_Bakery/src/java/admin/ManageProductController.java</file>
-            <file>file:/C:/Users/ADMIN/Documents/GitHub/Bakery_Shop/Final%20Project/Project_Bakery/src/java/model/Product.java</file>
         </group>
     </open-files>
 </project-private>

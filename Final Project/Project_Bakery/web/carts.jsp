@@ -13,7 +13,7 @@
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>Cart Page</title>
+        <title>Cart Cakes</title>
 
         <!-- Google Fonts -->
         <link href='http://fonts.googleapis.com/css?family=Titillium+Web:400,200,300,700,600' rel='stylesheet' type='text/css'>
@@ -65,7 +65,7 @@
                                     <a href="productdetail?id=${c.id}"><img style="height: 80px;width: 80px;" src="${c.imageUrl}" class="recent-thumb" alt=""></a>
                                     <h2><a href="productdetail?id=${c.id}">${c.name}</a></h2>
                                     <div class="product-sidebar-price">
-                                        <ins>${c.price}$</ins> 
+                                        <ins>${c.price}đ</ins> 
                                     </div>                             
                                 </div>
                             </c:forEach>
@@ -126,7 +126,7 @@
                                                         <!-- Price -->
 
                                                         <div class="product-carousel-price">
-                                                            <ins>Price:$${u.value.product.price}</ins> 
+                                                            <ins>Price:${u.value.product.price}đ</ins> 
 
                                                         </div>
                                                         <p class="product-carousel-price">
@@ -142,7 +142,7 @@
                                     </c:forEach>
                                 </div>
                                 <div class="card mb-4">
-                                    <input type="submit" value="Total: $${totalMoney}" name="update_cart" class="button">
+                                    <input type="submit" value="Total: ${totalMoney}" name="update_cart" class="button">
                                 </div>
                                 <hr class="my-4" />
                                 <div class="card mb-4 mb-lg-0">

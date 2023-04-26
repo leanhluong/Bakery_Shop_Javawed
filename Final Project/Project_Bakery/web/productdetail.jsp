@@ -12,7 +12,7 @@
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>Product Page - Ustora Demo</title>
+        <title>Cake Details</title>
 
         <!-- Google Fonts -->
         <link href='http://fonts.googleapis.com/css?family=Titillium+Web:400,200,300,700,600' rel='stylesheet' type='text/css'>
@@ -68,7 +68,7 @@
                                     <a href="productdetail?id=${c.id}"><img style="height: 80px;width: 80px;" src="${c.imageUrl}" class="recent-thumb" alt=""></a>
                                     <h2><a href="productdetail?id=${c.id}">${c.name}</a></h2>
                                     <div class="product-sidebar-price">
-                                        <ins>${c.price}$</ins> 
+                                        <ins>${c.price}đ</ins> 
                                     </div>                             
                                 </div>
                             </c:forEach>
@@ -118,7 +118,7 @@
                                             price: 
                                             <span class="product-inner-price">                                 
 
-                                                <ins>${product.price}$</ins> 
+                                                <ins>${product.price}</ins> 
 
                                             </span>
                                         </h4>

@@ -8,7 +8,7 @@
                 <ul class="nav navbar-nav " >
                     <li> <a style="padding:  0px;" href="home.jsp"><img  style="width: 80px" src="img/logo.png" alt="alt"/></a></li>
                     <li> <a class="bi bi-house-fill" href="home">Home</a></li>
-                    <li><a href="productlist">Cakes</a> </li>
+                    <li><a href="productlist">Menu Cakes</a> </li>
                         <c:if  test="${sessionScope.account.role == 1}">
                         <li><a  href="manage">Manage product</a>
 

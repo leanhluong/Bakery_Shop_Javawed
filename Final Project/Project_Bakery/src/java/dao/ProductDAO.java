@@ -177,17 +177,18 @@ public class ProductDAO extends DBContext {
 //        System.out.println(new ProductDAO().getAllProduct("x",null).size());
 //        System.out.println(new ProductDAO().getRelateProduct(48));
 //    }
-    public void changeProduct(String name,String code, double price, String description, String image_url, int category_id, int id) {
+    public void changeProduct(String name,String code, double price, String description, String image_url, int category_id, String created_date, int id) {
 
         try {
             PreparedStatement ps = connection.prepareStatement("UPDATE [dbo].[Product]\n"
                     + "   SET\n"
-                    + "      [product_name] = ?\n"
+                    + "      [name] = ?\n"
                     + "      ,[code] = ?\n"
                     + "      ,[price] = ?\n"
                     + "      ,[description] = ?\n"
                     + "      ,[image_url] = ?\n"
                     + "      ,[category_id] = ?\n"
+                    + "      ,[created_date] = ?\n"
                     + " WHERE id = ?");
             ps.setString(1, name);
             ps.setString(2, code);
@@ -195,7 +196,8 @@ public class ProductDAO extends DBContext {
             ps.setString(4, description);
             ps.setString(5,image_url );
             ps.setInt(6, category_id);
-            ps.setInt(7, id);
+            ps.setString(7, created_date);
+            ps.setInt(8, id);
             ps.executeUpdate();
         } catch (SQLException e) {
         }

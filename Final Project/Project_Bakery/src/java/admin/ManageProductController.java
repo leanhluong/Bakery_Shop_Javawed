@@ -105,8 +105,9 @@ public class ManageProductController extends HttpServlet {
             String code = request.getParameter("code");
             double price = Double.parseDouble(request.getParameter("price"));
             String description = request.getParameter("description");
+            String date = request.getParameter("date");
             int category_Id = Integer.parseInt(request.getParameter("category"));
-            pdao.changeProduct(name, code, price, description, image, category_Id, id);
+            pdao.changeProduct(name, code, price, description, image, category_Id,date, id);
 
         } else if ("add".equals(action)) {
         String name = request.getParameter("name");
